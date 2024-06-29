@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
 {
-    use HasFactory;
-
+    public function classrooms()
+    {
+        return $this->hasMany(Classroom::class);
+    }
 
     protected $guarded = [
         'id',
