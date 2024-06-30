@@ -10,12 +10,11 @@ use Illuminate\Database\Seeder;
 
 class ClassroomSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
+
     public function run()
     {
-        $locations = Location::pluck('id')->toArray();
+//        $locations = Location::pluck('id')->toArray();
         $classrooms = [
             ['name' => 'A1'],
             ['name' => 'B3'],

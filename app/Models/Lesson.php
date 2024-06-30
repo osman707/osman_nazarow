@@ -25,6 +25,10 @@ class Lesson extends Model
         return $this->belongsTo(Branch::class);
     }
 
+    public function registration() {
+    return $this->hasMany(Registration::class);
+}
+
     public function teacher() {
         return $this->belongsTo(Teacher::class);
     }
