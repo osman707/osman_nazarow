@@ -7,7 +7,29 @@ use Illuminate\Database\Eloquent\Model;
 
 class Classroom extends Model
 {
-    public function location() {
+    protected $guarded = [
+        'id',
+    ];
+
+    protected function casts()
+    {
+        return [
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+        ];
+    }
+
+    protected $fillable = [
+        'name',
+    ];
+
+    public function location()
+    {
         return $this->belongsTo(Location::class);
+    }
+
+    public function lessons()
+    {
+        return $this->hasMany(Lesson::class);
     }
 }

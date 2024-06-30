@@ -13,7 +13,7 @@ class LocationsSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
         $objs = [
             'Mir-1',

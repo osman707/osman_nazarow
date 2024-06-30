@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('phone');
             $table->date('birthday');
             $table->string('gender');
-            $table->timestamp('created_at')->useCurrent();
             $table->timestamps();
         });
     }
